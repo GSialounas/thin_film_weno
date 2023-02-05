@@ -145,7 +145,7 @@ In one spatial dimension for $Re\approx 1$ when surface tension effects are negl
 \begin{equation}
 \begin{aligned}
 \frac{\partial h}{\partial t} + \frac{\partial q}{\partial x}&=0\\
-\frac{\partial q}{\partial t} + \frac{\partial }{\partial x}\qp{\frac{6}{5}\frac{q^2}{h}=\frac{2}{5}qV-\frac{1}{5}V^2h+Ka\frac{h^2}{2}}&=-Kah\frac{\partial B}{\partial x}-\frac{3}{Re}\frac{\qp{q-Vh}}{h^2},
+\frac{\partial q}{\partial t} + \frac{\partial }{\partial x}\qp{\frac{6}{5}\frac{q^2}{h}-\frac{2}{5}qV+\frac{1}{5}V^2h+Ka\frac{h^2}{2}}&=-Kah\frac{\partial B}{\partial x}-\frac{3}{Re}\frac{\qp{q-Vh}}{h^2},
 \end{aligned}
 \end{equation}
  complemented with periodic boundary conditions. We consider the problem in the spatial domain $\W:=\qb{-1,1}$ and the temporal domain $\qb{0,T}$. Functions V and B are due to the water wave motion and are assumed to be given.  In deep water conditions they are linear combinations of harmonic components with frequency $\w_j$ and the wave number $k_j$ and phase $\phi_j$.
@@ -229,7 +229,7 @@ In this section we present the numerical results using the parameters we describ
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1.0\textwidth]{fig_effect_on_minh_kj_Bj}	
+	\includegraphics[width=1.0\textwidth]{figures/fig_effect_on_minh_kj_Bj}	
 	\caption{\label{fig:effect_Bj_kj_minh}  In this plot we
 		examine the effect of varying (individually) the parameters $k_j$ and $B_j$ on $\min{h}$ during a simulation. The parameters are defined in (\ref{eq:second_parameter_set}). }
 \end{figure}
