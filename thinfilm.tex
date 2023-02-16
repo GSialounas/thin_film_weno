@@ -135,7 +135,9 @@ The reader should note that the reason for scaling $\vec{k}$ and $\vec{w}$ by $\
 \begin{aligned}
 {k}_j&:=2^j\pi,\quad, j=0,\dots,5\\
 \w_j &:=\pi \sqrt{\frac{100}{\pi}\abs {k_j}}\\
-B_j&:=\frac{1}{4}2^j,\quad j = 0,\dots,5.
+B_j&:=\frac{1}{4}2^j,\quad j = 0,\dots,5,\\
+Ka&=0.1\\
+Re&=10.
 \end{aligned}
 	\end{equation}
 \end{Rem}
@@ -225,13 +227,20 @@ Finally, the WENO approximation to the flux derivative is obtained using
 \end{equation}
 The reader should note that we have omitted all details pertaining to flux construction and derivation of weights. 
 \section{Numerical Results}
-In this section we present the numerical results using the parameters we described in (\ref{eq:second_parameter_set}).  We note that the forcing is not a single trigonometric function but rather the right hand side that results from the analysis in the thin film paper. The results are shown in Fig. \ref{fig:effect_Bj_kj_minh}
+In this section we present the numerical results using the parameters we described in (\ref{eq:second_parameter_set}).  
 
-\begin{figure}[h]
-	\centering
+In addition, we conduct an additional set of numerical experiments where we  examine the effect of varying the domain size as follows:
+\begin{equation}
+\W:=\qb{-2^{i}, 2^{1}}\quad i=0,\dots,5.
+\end{equation}.
+In this case, we use $k_j=\pi$ and $B_j=8$, which is the most adverse case observed in the previous numerical experiments.
+We note that the forcing is not a single trigonometric function but rather the right hand side that results from the analysis in the thin film paper. The results are shown in Fig. \ref{fig:effect_Bj_kj_minh}
+
+\begin{figure}
+\centering
 	\includegraphics[width=1.0\textwidth]{figures/fig_effect_on_minh_kj_Bj}	
 	\caption{\label{fig:effect_Bj_kj_minh}  In this plot we
-		examine the effect of varying (individually) the parameters $k_j$ and $B_j$ on $\min{h}$ during a simulation. The parameters are defined in (\ref{eq:second_parameter_set}). }
+		examine the effect of varying (individually) the parameters $k_j$ and $B_j$ as well as domain size on $\min{h}$ during a simulation. The parameters are defined in (\ref{eq:second_parameter_set}). }
 \end{figure}
 
 
